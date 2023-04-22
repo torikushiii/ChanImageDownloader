@@ -28,6 +28,8 @@ console will show the port the server is running on.
 
 - Open your browser and go to `http://localhost:8988` or any other port you specified in the config file.
 
+## Configuration file
+
 ```json
 module.exports = {
 	host: "0.0.0.0",
@@ -57,8 +59,6 @@ module.exports = {
 };
 
 ```
-
-## Configuration file
 
 - `host`: The host the server will listen on.
 - `port`: The port the server will listen on.
