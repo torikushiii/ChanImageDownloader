@@ -34,6 +34,15 @@ const filterThreads = (threads, prefix) => {
 				created: new Date(i.time * 1000)
 			}));
 	}
+	else if (prefix instanceof RegExp) {
+		return threads.filter(i => i.sub?.match(prefix))
+			.map(i => ({
+				id: i.no,
+				content: `${i.sub}`,
+				modified: new Date(i.last_modified * 1000),
+				created: new Date(i.time * 1000)
+			}));
+	}
 };
 
 const createDirectory = async (path) => {
